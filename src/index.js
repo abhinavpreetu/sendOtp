@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter , Switch, Route, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 import Main from './components/main';
@@ -42,7 +42,7 @@ class App extends Component {
             <Redirect exact from='/contacts' to='/contacts/list' />
             <Route path="/contacts" render={() => 
               <Contacts selectedContact={selectedContact} >
-                <Route exact path="/contacts/list" render={()=><ListOfContacts contacts={contacts} selectContactHandler={this.selectContact} />}></Route>
+                <Route exact path="/contacts/list" render={(routeProps)=><ListOfContacts routerProps={routeProps} contacts={contacts} selectContactHandler={this.selectContact} />}></Route>
                 <Route exact path="/contacts/details" render={()=><Details selectedContact={selectedContact} />}></Route>
                 <Route exact path="/contacts/send" render={()=><SendMessage selectedContact={selectedContact} />}></Route>
               </Contacts>
@@ -62,7 +62,7 @@ class App extends Component {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter  basename={process.env.PUBLIC_URL}>
     <App />
-  </BrowserRouter>
+  </HashRouter >
   , rootElement);
