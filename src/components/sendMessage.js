@@ -42,7 +42,7 @@ class SendMessage extends Component {
             text: this.state.message.concat(fixedMessage)
         };
         axios({
-            url: 'http://localhost:3001/sendSMS',
+            url: 'https://nexmo-send-sms.herokuapp.com/sendSMS',
             data: payload,
             method: 'POST'
         })

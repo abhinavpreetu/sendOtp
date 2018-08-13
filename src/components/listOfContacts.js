@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../styles/styles.css'
+import '../styles/styles.css';
 
 const renderList = props => {
     const { contacts, selectContactHandler } = props;
