@@ -1,4 +1,4 @@
-#Send SMS APP#
+# Send SMS APP #
 
 The app is hosted on github pages at https://abhinavpreetu.github.io/sendOtp/.
 
