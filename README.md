@@ -12,9 +12,9 @@ This is a simple SPA built using -
 The frontend is built using React.js and CSS3.
 
 * I have a base component App which has two sub-components
-1. **Navbar - ** It consists of the tabs for the application. It has <Link> tags for routing to a particular route.
+1. ** Navbar ** - It consists of the tabs for the application. It has <Link> tags for routing to a particular route.
     Any number of tabs can be added to this component.
-2. **Main - ** It consists of all the components that render data. <Route> tag is used to render all the components.
+2. ** Main ** - It consists of all the components that render data. <Route> tag is used to render all the components.
 
 The state is maintained in index.js file. And all the components are passed data from the index.js file. I have tried to avoid "props drilling"
 in the code.
